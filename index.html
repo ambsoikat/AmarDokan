@@ -78,15 +78,59 @@
             </svg>
           </a>
 
-          <!-- Cart -->
-          <a href="#" class="relative text-gray-600 hover:text-blue-500">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
-            <span
-              class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
-          </a>
+          <!-- Cart Icon -->
+<a href="#" id="cartBtn" class="relative text-gray-600 hover:text-blue-500">
+  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+      d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+  </svg>
+  <span
+    class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+</a>
+
+<!-- Cart Sidebar -->
+<div id="cartSidebar"
+  class="fixed top-0 right-0 w-80 max-w-full h-full bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out z-50">
+  <div class="flex justify-between items-center border-b px-4 py-3">
+    <h2 class="text-lg font-semibold text-gray-700">Your Cart</h2>
+    <button id="closeCart" class="text-gray-600 hover:text-red-500 text-2xl font-bold">&times;</button>
+  </div>
+
+  <!-- Cart Items -->
+  <div class="p-4 space-y-4 overflow-y-auto h-[calc(100%-120px)]">
+    <div class="flex items-center justify-between">
+      <img src="image/product1.webp" class="w-12 h-12 rounded-md object-cover" alt="">
+      <div class="flex-1 px-3">
+        <p class="text-sm font-semibold">Product Name</p>
+        <p class="text-xs text-gray-500">Qty: 1</p>
+      </div>
+      <p class="text-sm font-semibold">$20</p>
+    </div>
+
+    <div class="flex items-center justify-between">
+      <img src="image/grocery.png" class="w-12 h-12 rounded-md object-cover" alt="">
+      <div class="flex-1 px-3">
+        <p class="text-sm font-semibold">Grocery Item</p>
+        <p class="text-xs text-gray-500">Qty: 2</p>
+      </div>
+      <p class="text-sm font-semibold">$15</p>
+    </div>
+  </div>
+
+      <!-- Cart Footer -->
+      <div class="border-t px-4 py-3">
+        <div class="flex justify-between text-sm font-semibold mb-3">
+          <span>Total:</span>
+          <span>$35</span>
+        </div>
+        <button class="w-full bg-blue-500 hover:bg-blue-600 text-white py-2 rounded-lg font-semibold">Checkout</button>
+      </div>
+    </div>
+
+    <!-- Background Overlay -->
+    <div id="overlay"
+      class="fixed inset-0 bg-black bg-opacity-40 hidden z-40 transition-opacity duration-500"></div>
+
 
           <!-- Hamburger -->
           <div class="md:hidden">
